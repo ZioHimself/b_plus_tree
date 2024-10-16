@@ -6,9 +6,9 @@ public class Main {
         tree.insert(1, "One");
         tree.insert(2, "Two");
         tree.insert(3, "Three");
-        // tree.insert(4, "Four");
-        // tree.insert(5, "Five");
-        //tree.insert(6, "Six");
+        tree.insert(4, "Four");
+        tree.insert(5, "Five");
+        tree.insert(6, "Six");
 
         System.out.println(tree.visualize());
     }
