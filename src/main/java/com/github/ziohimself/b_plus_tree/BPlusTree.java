@@ -106,11 +106,11 @@ public class BPlusTree<K extends Comparable<K>, V> {
             int mid = keys.size() / 2;
             InternalNode newNode = new InternalNode();
             // Move the right half of keys to the new node
-            newNode.keys = new ArrayList<>(keys.subList(mid + 1, keys.size()));
+            newNode.keys = new ArrayList<>(keys.subList(mid, keys.size()));
             // Move the right half of children to the new node
-            newNode.children = new ArrayList<>(children.subList(mid + 1, children.size()));
+            newNode.children = new ArrayList<>(children.subList(mid, children.size()));
             // Keep the left half of keys in this node
-            keys = new ArrayList<>(keys.subList(0, mid));
+            keys = new ArrayList<>(keys.subList(0, mid + 1));
             // Keep the left half of children in this node
             children = new ArrayList<>(children.subList(0, mid + 1));
             return newNode;
